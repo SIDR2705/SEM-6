@@ -17,6 +17,6 @@ https://phoenixnap.com/kb/ubuntu-install-kvm
 8. sudo virt-manager 
 
 
-
+CC-3
 https://studyber.com/creating-an-application-in-salesforce-com-using-apex-programming-language/
 

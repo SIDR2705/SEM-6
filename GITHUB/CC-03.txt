@@ -1,0 +1,45 @@
+public class Demo1 {
+    public void CreateAccount(string Name , String Phone){
+        account acc=new account();
+        acc.Name = Name;
+        acc.Phone= Phone;
+	insert acc;
+        System.debug('Account has been inserted : '+ acc.Name);
+    }
+}
+
+
+Demo1 acc=new Demo1();
+acc.CreateAccount('Siddhi','97367298');
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+public class Demo2 {
+    public void UpdateOldAccount(string Name){
+        List<Account>oldAccounts= new List<Account>();
+        for(Account acc:[SELECT Name from Account WHERE Phone='73916235']){
+            acc.Name=Name;
+            oldAccounts.add(acc);
+            System.debug('Account has been Updated '+ acc.name);
+        }
+        update oldAccounts;
+    }
+}
+
+Demo2 acc=new Demo2();
+acc.UpdateOldAccount('Simran');
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+public class Demo3 {
+    public void DeleteAccount() {
+        List<Account> oldAccounts = new List<Account>();
+        for(Account acc: [SELECT Name, Phone FROM Account WHERE Name='Siddhant']) {
+            delete acc;
+        }
+        update oldAccounts;
+    }
+}
+
+Demo3 acc=new Demo3();
+acc.DeleteAccount();

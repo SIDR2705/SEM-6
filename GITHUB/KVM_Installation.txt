@@ -1,0 +1,22 @@
+https://phoenixnap.com/kb/ubuntu-install-kvm
+
+1. sudo apt update
+
+2. sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+
+3. sudo adduser ‘username’ libvirt
+
+4. sudo adduser ‘[username]’ kvm
+
+5. virsh list --all
+
+6. sudo systemctl enable --now libvirtd
+
+7. sudo apt install virt-manager
+
+8. sudo virt-manager 
+
+
+
+https://studyber.com/creating-an-application-in-salesforce-com-using-apex-programming-language/
+
